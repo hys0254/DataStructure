@@ -20,6 +20,17 @@ int main()
 		cout << elem << endl;
 		notEmpty = l.next(elem);
 	}
+	l.previous(elem);
+	cout << "마지막에서 두번째 " << elem << endl;
+	l.previous(elem);
+	cout << "마지막에서 세번째 " << elem << endl;
+	l.next(elem);
+	cout << "마지막에서 두번째 " << elem << endl;
+	l.next(elem);
+	cout << "마지막 " << elem << endl;
+	l.first(elem);
+	cout <<"첫번째 " <<elem << endl;
+
 
 	return 0;
 }

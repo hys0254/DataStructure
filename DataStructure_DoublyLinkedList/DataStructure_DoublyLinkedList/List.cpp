@@ -6,7 +6,7 @@ void List::insert(const ListElementType& elem)
     Link addedNode = new Node;
     assert(addedNode);
     addedNode->elem = elem;
-    addedNode->next = head;
+	addedNode->next = head;
     if (head) 
         head->prev = addedNode;   
     addedNode->prev = 0;
@@ -39,11 +39,10 @@ bool List::first(ListElementType& elem)
 }
 bool List::next(ListElementType& elem)
 {
-	// with proper use, current should always be nonzero
+	
 	assert(current);
 
-	// After each call, current always points to the item
-	// that next has just returned.
+
 	if (current->next == 0)
 		return false;
 	else {
