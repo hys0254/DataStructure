@@ -2,10 +2,33 @@
 //
 
 #include <iostream>
+#include"Queue.h"
+
+using namespace std;
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Queue<char> q;
+    q.enqueue('a');
+    q.enqueue('b');
+    while (!q.isEmpty()) {
+     
+        cout << q.dequeue() << endl;
+    }
+    cout << "Queue is empty" << endl;
+
+    q.enqueue('a');
+    q.enqueue('b');
+    q.enqueue('c');
+    q.enqueue('d');
+    cout << "NOW Queue is FULL" << endl;
+    q.enqueue('e');
+    q.enqueue('f');
+    q.dequeue();
+    cout << q.front() << endl;
+    for (int i = 0; i < 5; i++) {
+        cout << q.dequeue() << endl;
+    }
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
