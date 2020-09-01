@@ -29,8 +29,8 @@ Stack < StackElementType >::Stack()
 }
 template < class StackElementType >
 
-void
-Stack < StackElementType >::push(StackElementType item)
+
+void Stack < StackElementType >::push(StackElementType item)
 {
 	++topIndex;
 	
@@ -38,8 +38,7 @@ Stack < StackElementType >::push(StackElementType item)
 	stackArray[topIndex] = item;
 }
 template < class StackElementType >
-StackElementType
-Stack < StackElementType >::pop()
+StackElementType Stack < StackElementType >::pop()
 {
 	
 	assert(topIndex >= 0);
