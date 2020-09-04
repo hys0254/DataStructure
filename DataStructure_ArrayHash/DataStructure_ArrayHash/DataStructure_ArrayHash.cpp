@@ -2,10 +2,25 @@
 //
 
 #include <iostream>
+#include "Table.h"
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    Table<int, int> table;
+    table.insert(1, 19960227);
+    table.insert(2, 19960101);
+    table.insert(3, 19960202);
+    table.insert(4, 19960303);
+    table.insert(5, 19960404);
+    table.insert(6, 19960505);
+    table.insert(7, 19960606);
+    table.dump();
+    table.deleteKey(6);
+    table.deleteKey(7);
+    table.insert(7, 19960808);
+    table.dump();
+    
+    
 }
 
 // 프로그램 실행: <Ctrl+F5> 또는 [디버그] > [디버깅하지 않고 시작] 메뉴
