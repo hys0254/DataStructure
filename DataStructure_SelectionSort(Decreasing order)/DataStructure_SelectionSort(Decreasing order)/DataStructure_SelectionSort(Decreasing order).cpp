@@ -53,10 +53,10 @@ void swapElement(int target[], int maxPos, int last)
 void selectionSort(int target[], int numCnt)
 {
     int lastPos = numCnt - 1;
-    int maxPos;
+    int minPos;
     while (lastPos > 0) {
-        maxPos = minSelect(target, lastPos + 1);
-        swapElement(target, maxPos, lastPos);
+        minPos = minSelect(target, lastPos + 1);
+        swapElement(target, minPos, lastPos);
         lastPos--;
     }
 }
